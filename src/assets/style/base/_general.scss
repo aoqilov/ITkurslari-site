@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $bg-body;
+  font-family: "Manrope", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: #000;
+  }
+}
+// usualy text-style
+
+.title-24 {
+  @include font(#000, 24px, 32px, 800);
+  // media
+  @include sm {
+    @include font(#000, 20px, 32px, 800);
+  }
+}
+.title-18 {
+  @include font(#000, 18px, 28px, 800);
+  // media
+  @include sm {
+    @include font(#000, 16px, 28px, 800);
+  }
+}
+.des-14 {
+  @include font(#5a5a5a, 14px, 24px, 500);
+  // media
+  @include sm {
+    @include font(#5a5a5a, 14px, 25px, 600);
+  }
+}
+.des-14-max {
+  @include font(#5a5a5a, 14px, 24px, 600);
+  letter-spacing: -0.14px;
+  // media
+  @include sm {
+    @include font(#5a5a5a, 14px, 25px, 600);
+  }
+}
