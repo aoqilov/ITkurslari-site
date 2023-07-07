@@ -1,0 +1,17 @@
+.last {
+  .more-news {
+    margin: 0 auto;
+    width: 175px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1.5px solid #051ed6;
+    margin-bottom: 20px;
+    &__btn {
+      @include font(#051ed6, 14px, 24px, 700);
+      text-transform: uppercase;
+    }
+  }
+}

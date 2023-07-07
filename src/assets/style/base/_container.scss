@@ -9,24 +9,20 @@
   @include xl {
     max-width: $xl;
     padding: 0 115px;
-    background-color: rgba(0, 128, 0, 0.197);
   }
   // lg 768-992
   @include lg {
     max-width: $lg;
-    background-color: rgba(255, 0, 0, 0.19);
-    padding: 0 60px;
+    padding: 0 40px;
   }
   //md 576-768
   @include md {
     max-width: $md;
-    background-color: rgba(0, 0, 255, 0.198);
     padding: 0 16px;
   }
   // sm 0- 576
   @include sm {
     max-width: $sm;
-    background-color: rgba(255, 255, 0, 0.19);
     padding: 0 16px;
   }
 }

@@ -1,4 +1,4 @@
-import { Capital } from "components/sections";
+import { Advert, Auto, Capital, Last } from "components/sections";
 import React from "react";
 
 const index = () => {
@@ -6,6 +6,9 @@ const index = () => {
     <div className="home">
       <div className="container">
         <Capital />
+        <Last />
+        <Advert />
+        <Auto />
       </div>
     </div>
   );

@@ -27,16 +27,20 @@ ul {
   list-style: none;
 }
 a {
+  display: inline-block;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+
   &:active {
     color: #000;
   }
 }
 // usualy text-style
-
+.title-top {
+  @include font(#051ed6, 24px, 28px, 800);
+  letter-spacing: -0.24px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
 .title-24 {
   @include font(#000, 24px, 32px, 800);
   // media
@@ -64,5 +68,82 @@ a {
   // media
   @include sm {
     @include font(#5a5a5a, 14px, 25px, 600);
+  }
+}
+.time-clock {
+  display: flex;
+  gap: 8px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+  p {
+    @include font(#9b9b9c, 14px, 16px, 600);
+  }
+}
+.border-32 {
+  width: 100%;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin: 32px 0;
+  stroke-width: 2px;
+  @include md {
+    margin: 24px 0;
+    height: 3px;
+  }
+}
+.border-24 {
+  width: 100%;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 24px;
+  stroke-width: 2px;
+  @include md {
+    margin-bottom: 24px;
+    height: 3px;
+  }
+}
+.border-inline-32 {
+  width: 100%;
+  height: 5px;
+  background-color: #f1f1f1;
+  margin: 32px 0;
+  stroke-width: 2px;
+  display: none;
+  @include md {
+    display: block;
+    margin: 24px 0;
+    height: 3px;
+  }
+}
+.haw {
+  height: 28px;
+  margin-top: 10px;
+  width: 100%;
+  @include md {
+    margin-top: 0px;
+  }
+}
+.base-frame {
+  border-radius: 8px;
+  border: 3px solid #eff0f3;
+  background: #fff;
+  padding: 24px;
+  margin-bottom: 32px;
+  height: auto;
+}
+.more-news {
+  margin: 0 auto;
+  width: 175px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1.5px solid #051ed6;
+  margin-bottom: 20px;
+  &__btn {
+    @include font(#051ed6, 14px, 24px, 700);
+    text-transform: uppercase;
   }
 }
