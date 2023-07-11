@@ -1,158 +1,142 @@
-.footer {
+.foter {
   width: 100%;
-  height: 389px;
   background-color: $bg-footer;
-  &__desktop {
-    width: 100%;
-    height: 100%;
-    .desktop {
+
+  &-desktop {
+    height: 389px;
+    .foter-list-wrapper {
       display: flex;
-      &__col1 {
-        min-width: 160px;
-        .col1-logo {
+      .left {
+        min-width: 150px;
+        &-logo {
           margin-top: 40px;
-          margin-bottom: 20px;
           width: 120px;
           height: 40px;
+          margin-bottom: 19px;
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
           }
         }
-        .col1-menu {
+        &-contact {
+          display: flex;
+          flex-direction: column;
           margin-bottom: 130px;
-          ul {
-            li {
-              a {
-                text-transform: capitalize;
-                display: inline-block;
-                @include font(#9eaaff, 12px, 24px, 500);
-                &:hover {
-                  color: whitesmoke;
-                }
-              }
-            }
+          &__link {
+            @include font(#9eaaff, 12px, 24px, 500);
+            text-transform: capitalize;
           }
         }
-        .col1-design {
-          p {
+        &-fido {
+          @include font(#fff, 14px, 20px, 700);
+          &__link {
             @include font(#fff, 14px, 20px, 700);
-            a {
-              @include font(#fff, 14px, 20px, 700);
-              text-decoration: underline;
-            }
+            text-decoration: underline;
           }
         }
       }
-      &__col2 {
-        margin-left: 67px;
+      .right {
         position: relative;
-        .col2-nav {
-          margin-top: 50px;
+        margin-left: 67px;
+        &-nav {
           margin-bottom: 29px;
-          ul {
+
+          &__list {
+            display: flex;
+            margin-top: 50px;
+          }
+          &__item {
+            margin-right: 32px;
+            text-align: center;
             display: flex;
             align-items: center;
-            li {
-              margin-right: 32px;
-              a {
-                @include font(#fff, 16px, 20px, 500);
-                text-transform: capitalize;
-              }
-              .active {
-                font-weight: 700;
-              }
+          }
+          &__link {
+            @include font(#fff, 16px, 20px, 500);
+            text-transform: capitalize;
+            &.active {
+              font-weight: 700;
             }
           }
         }
-        .col2-socialbox {
+        &-social {
           margin-bottom: 125px;
-          .social {
-            &__title {
-              @include font(#9eaaff, 12px, 24px, 500);
-              margin-bottom: 25px;
-            }
-            &__iconsbox {
-              display: flex;
-              align-items: center;
-              a {
-                width: 40px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 15px;
-                stroke-width: 1px;
-                stroke: #d9d9d9;
-                border: 1px solid #d9d9d9;
-                border-radius: 50%;
-              }
-            }
+          &__title {
+            @include font(#9eaaff, 12px, 14px, 500);
+            margin-bottom: 25px;
+          }
+          &__box {
+            display: flex;
+            align-items: center;
+          }
+          &__link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #d9d9d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
           }
         }
-        .col2-biglogo {
+        &-copyright {
+          @include font(#9eaaff, 12px, 16px, 500);
+          max-width: 500px;
+          position: absolute;
+        }
+        &-biglogo {
           position: absolute;
           top: 187px;
           left: 35px;
-          z-index: 0;
+          max-height: 190px;
+          max-width: 570px;
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: 3;
-          }
-        }
-        .col2-copyright {
-          width: 504px;
-          position: absolute;
-          //   media
-          @include md {
-            max-width: 330px;
-          }
-          .col2-copyright-text {
-            @include font(#9eaaff, 12px, 16px, 500);
           }
         }
       }
     }
-    // media
-    @include sm {
+  }
+
+  // media
+  @include sm {
+    width: 100%;
+    background-color: #fff;
+    &-desktop {
       display: none;
     }
-  }
-  &__mobile {
-    display: none;
-  }
-}
-// media
-@include sm {
-  .footer {
-    height: 79px;
-    border-radius: 26px 26px 0px 0px;
-    background: #d9d9d9;
-    &__mobile {
-      height: 100%;
+    &-mobile {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 72px;
-
-      .mobile {
-        &__box {
+      padding: 0 16px;
+      width: 100%;
+      height: 79px;
+      background-color: #fff;
+      border-radius: 26px 26px 0px 0px;
+      box-shadow: 2px 4px 8px rgb(104, 103, 103);
+      .mobile-box {
+        height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+        &__link {
           text-align: center;
-          img {
-            width: 24px;
-            height: 24px;
-          }
-          p {
-            @include font(#a7a6a6, 10px, 10px, 500);
-            text-transform: capitalize;
-          }
+          font-size: 10px;
+          line-height: 100%;
+          font-weight: 500;
+          color: #a7a6a6;
           &.active {
-            p {
-              color: #051ed9;
-            }
+            color: #051ed6;
+          }
+
+          p {
+            margin-top: 8px;
+            text-transform: capitalize;
           }
         }
       }

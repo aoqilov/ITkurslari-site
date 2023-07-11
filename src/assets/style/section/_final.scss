@@ -1,5 +1,8 @@
 .final {
   margin-bottom: 32px;
+  @include md {
+    // margin-bottom: 75px;
+  }
   &__maintitle {
     display: flex;
     align-items: center;

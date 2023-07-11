@@ -11,124 +11,114 @@ import fwheel from "assets/imgbox/svg/fwheel.svg";
 import fDocument from "assets/imgbox/svg/fdocument.svg";
 
 const index = () => {
-  const [fotNavActive, setFotNavActive] = useState(1);
   return (
-    <footer className="footer">
+    <div className="foter">
       <div className="container">
-        <div className="footer__desktop">
-          <div className="desktop">
-            <div className="desktop__col1">
-              <div className="col1-logo">
-                <a href="#image">
-                  <img src={imgLogoFooter} alt="logo ggg" />
+        <div className="foter-desktop">
+          <div className="foter-list-wrapper">
+            <div className="foter-list__left left">
+              <a href="#logo" className="left-logo">
+                <img src={imgLogoFooter} alt="dsa" />
+              </a>
+              <div className="left-contact">
+                <a className="left-contact__link" href="#reklama">
+                  reklama
+                </a>
+                <a className="left-contact__link" href="#loyiha">
+                  loyiha haqida
+                </a>
+                <a className="left-contact__link" href="#qoidalar">
+                  qoidalar
+                </a>
+                <a className="left-contact__link" href="#contact">
+                  contact
                 </a>
               </div>
-              <div className="col1-menu">
-                <ul>
-                  <li>
-                    <a href="#reklama">reklama</a>
-                  </li>
-                  <li>
-                    <a href="#loyiha haqida">loyiha haqida</a>
-                  </li>
-                  <li>
-                    <a href="#qoidalar">qoidalar</a>
-                  </li>
-                  <li>
-                    <a href="#contact">biz bilan aloqa</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col1-design">
+              <div className="left-fido">
                 <p>
-                  Design by <a href="#fido-studio">Fido Studio</a>
+                  Design by{" "}
+                  <a href="#fido" className="left-fido__link">
+                    Fido Studio
+                  </a>
                 </p>
               </div>
             </div>
-            <div className="desktop__col2">
-              <div className="col2-nav">
-                <ul>
-                  <li>
-                    <a
-                      onClick={() => setFotNavActive(1)}
-                      className={`${fotNavActive == 1 ? "active" : ""}`}
-                      href="#texno-yangiliklar"
-                    >
+            <div className="foter-list__right right">
+              <nav className="right-nav">
+                <ul className="right-nav__list">
+                  <li className="right-nav__item">
+                    <a href="/" className="right-nav__link active">
                       texno yangiliklar
                     </a>
                   </li>
-                  <li>
-                    <a
-                      onClick={() => setFotNavActive(2)}
-                      className={`${fotNavActive == 2 ? "active" : ""}`}
-                      href="#avto-yangiliklar"
-                    >
+                  <li className="right-nav__item">
+                    <a href="/info" className="right-nav__link">
                       avto yangiliklar
                     </a>
                   </li>
-                  <li>
-                    <a
-                      onClick={() => setFotNavActive(3)}
-                      className={`${fotNavActive == 3 ? "active" : ""}`}
-                      href="#sharhlar"
-                    >
+                  <li className="right-nav__item">
+                    <a href="#sharhlar" className="right-nav__link">
                       sharhlar
                     </a>
                   </li>
                 </ul>
-              </div>
-              <div className="col2-socialbox">
-                <div className="social">
-                  <h2 className="social__title">Biz ijtimoiy tarmoqlarda:</h2>
-                  <div className="social__iconsbox">
-                    <a href="#social-link">
-                      <img src={svgFacebook} alt="svg icon" title="facebook" />
-                    </a>
-                    <a href="#social-link">
-                      <img src={svgTwit} alt="svg icon" title="twiter" />
-                    </a>
-                    <a href="#social-link">
-                      <img src={svgInsta} alt="svg icon" title="instagram" />
-                    </a>
-                    <a href="#social-link">
-                      <img src={svgLink} alt="svg icon" title="link" />
-                    </a>
-                  </div>
+              </nav>
+              <div className="right-social">
+                <h4 className="right-social__title">
+                  Biz ijtimoiy tarmoqlarda:
+                </h4>
+                <div className="right-social__box">
+                  <a href="#icon" className="right-social__link">
+                    <img src={svgFacebook} alt="dsa" />
+                  </a>
+
+                  <a href="#icon" className="right-social__link">
+                    <img src={svgTwit} alt="dsa" />
+                  </a>
+                  <a href="#icon" className="right-social__link">
+                    <img src={svgInsta} alt="dsa" />
+                  </a>
+                  <a href="#icon" className="right-social__link">
+                    <img src={svgLink} alt="dsa" />
+                  </a>
                 </div>
               </div>
-              <div className="col2-biglogo">
-                <img src={imgBigLogo} alt="big logo" />
+              <div className="right-biglogo">
+                <img src={imgBigLogo} alt="das" />
               </div>
-              <div className="col2-copyright">
-                <p className="col2-copyright-text">
-                  © Copyright 2022 Giglink Barcha huquqlar himoyalangan.
-                  O‘zbekiston Matbuot va axborot agentligi tomonidan 2013-yil
-                  04-06-sonli ro‘yxatga olinganlik guvohnomasi № 0976
-                </p>
-              </div>
+              <p className="right-copyright">
+                © Copyright 2022 Giglink Barcha huquqlar himoyalangan.
+                O‘zbekiston Matbuot va axborot agentligi tomonidan 2013-yil
+                04-06-sonli ro‘yxatga olinganlik guvohnomasi № 0976
+              </p>
             </div>
           </div>
         </div>
-        <div className="footer__mobile mobile">
-          <a href="/" className="mobile__box active">
-            <img src={fHome} alt="icon home" />
-            <p>home</p>
-          </a>
-          <a href="info" className="mobile__box">
-            <img src={fList} alt="icon home" />
-            <p>lenta</p>
-          </a>
-          <a href="#whheel" className="mobile__box">
-            <img src={fwheel} alt="icon home" />
-            <p>avto</p>
-          </a>
-          <a href="#document" className="mobile__box">
-            <img src={fDocument} alt="icon home" />
-            <p>tavsif</p>
-          </a>
+      </div>
+
+      <div className="foter-mobile">
+        <div className="container">
+          <div className="mobile-box">
+            <a href="/" className="mobile-box__link active">
+              <img src={fHome} alt="asd" />
+              <p>home</p>
+            </a>
+            <a href="/info" className="mobile-box__link">
+              <img src={fList} alt="asd" />
+              <p>list</p>
+            </a>
+            <a href="#wheel" className="mobile-box__link">
+              <img src={fwheel} alt="asd" />
+              <p>wheel</p>
+            </a>
+            <a href="#doc" className="mobile-box__link">
+              <img src={fDocument} alt="asd" />
+              <p>document</p>
+            </a>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

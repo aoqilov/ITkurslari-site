@@ -5,7 +5,7 @@ import { lastNews } from "store";
 const last = () => {
   return (
     <section className="last base-frame">
-      <div className="last__maintitle">
+      <div className="last-top__title">
         <a href="#lastnews" className="title-top">
           So’ngi yangiliklar
         </a>

@@ -5,11 +5,13 @@ import { Outlet } from "react-router-dom";
 const index = () => {
   return (
     <div className="layout">
-      <Header />
-      <main>
+      <div className="layout-header">
+        <Header />
+      </div>
+      <main className="layout-main">
         <Outlet />
       </main>
-      <div className="layout__foter">
+      <div className="layout-footer">
         <Footer />
       </div>
     </div>

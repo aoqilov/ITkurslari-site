@@ -8,13 +8,13 @@ const index = () => {
   return (
     <header className="header">
       <div className="container">
-        <div className="header__wrapper">
-          <div className="header__logo">
+        <div className="header-wrapper">
+          <div className="header-wrapper__logo">
             <a href="#home">
               <img src={imgLogo} alt="logo" title="home" />
             </a>
           </div>
-          <div className="header__menu">
+          <div className="header-wrapper__menu">
             <nav className="nav">
               <ul className="nav__list">
                 <li className={`nav__item ${navActive == 1 ? "active" : ""}`}>
@@ -47,7 +47,7 @@ const index = () => {
               </ul>
             </nav>
           </div>
-          <div className="header__lang">
+          <div className="header-wrapper__lang">
             <ul className="lang">
               <li
                 onClick={() => setLangActive(1)}

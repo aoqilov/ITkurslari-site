@@ -9,6 +9,7 @@ const index = () => {
         <Last />
         <Advert />
         <Auto />
+        <div className="bottom-footer"></div>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Clock, Hashtag } from ".";
 
 const cardCol = ({ arr }) => {
   return (
-    <div className="card-box">
+    <div className="card-col">
       {arr.map((item) => {
         return (
           <>

@@ -1,59 +1,94 @@
 .auto {
   position: relative;
+
+  // md
+  @include sm {
+  }
   &-toptitle {
     color: #00cf91;
   }
-  &-mainbox {
+  .auto-bigcard {
     display: flex;
     justify-content: space-between;
     gap: 25px;
     margin-bottom: 24px;
-  }
-  &-mainbox__img {
-    height: 221px;
-    width: 50%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
+    &__img {
+      height: 221px;
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
     }
-  }
-  &-mainbox__content {
-    width: 50%;
+    &__content {
+      width: 50%;
+    }
+    &__hashtagbox {
+      margin-bottom: 16px;
+    }
+    &__title {
+      margin-bottom: 47px;
+      @include sliceText(3);
+    }
+    // media
+    @include md {
+      flex-direction: column;
+      gap: 0;
 
-    .content {
-      &-hashtagbox {
-        margin-bottom: 16px;
+      &__img {
+        width: 100%;
+        height: 215px;
       }
-      &-title {
-        margin-bottom: 47px;
-        @include sliceText(3);
+      &__content {
+        width: 100%;
+        position: relative;
+        height: 245px;
+      }
+      &__time {
+        position: absolute;
+        top: 24px;
+      }
+      &__title {
+        position: absolute;
+        top: 56px;
+        font-size: 18px;
+        @include sliceText(4);
+      }
+      &__hashtagbox {
+        position: absolute;
+        top: 194px;
+      }
+    }
+    @include sm {
+      &__img {
+        height: 175px;
       }
     }
   }
-  .another {
-    .card {
+  .auto-smallcard {
+    .auto-small {
       display: flex;
       gap: 25px;
       margin-bottom: 24px;
-      &-content {
+      &__content {
         width: 75%;
       }
-      &-content__title {
-        margin-bottom: 17px;
+      &__title {
+        margin-bottom: 20px;
       }
-      &-content__des {
+      &__des {
         margin-bottom: 19px;
       }
-      &-content__bottom {
+      &__bottom {
         display: flex;
         justify-content: space-between;
         .bottom-tiime {
           padding-right: 25px;
         }
       }
-      &-img {
+      &__img {
         width: 25%;
         img {
           width: 100%;
@@ -62,85 +97,61 @@
           border-radius: 12px;
         }
       }
+      //   media
     }
+    // media
     @include md {
-      .card {
+      .auto-small {
         flex-direction: column-reverse;
-        gap: 0;
-        margin-bottom: 350px;
-        &-content {
+        position: relative;
+        &__img {
           width: 100%;
+          height: 245px;
+        }
+        &__content {
           position: relative;
+          width: 100%;
+          min-height: 285px;
         }
-        &-content__title {
-          position: absolute;
-          top: 50px;
-          @include sliceText(3);
-        }
-        &-content__des {
-          position: absolute;
-          top: 150px;
-          @include sliceText(4);
-        }
-        &-content__bottom {
-          display: flex;
-          justify-content: none;
-
+        &__bottom {
           .bottom-tiime {
             position: absolute;
-            top: 24px;
+            top: 0;
           }
           .bottom-hash {
             position: absolute;
             top: 260px;
           }
         }
-        &-img {
-          width: 100%;
-          height: 215px;
+        &__title {
+          position: absolute;
+          top: 32px;
+          @include sliceText(3);
+        }
+        &__des {
+          position: absolute;
+          top: 148px;
+        }
+      }
+    }
+    @include sm {
+      .auto-small {
+        &__img {
+          height: 175px;
+        }
+        &__content {
+          min-height: 315px;
+        }
+        &__bottom {
+          .bottom-hash {
+            position: absolute;
+            top: 290px;
+          }
         }
       }
     }
   }
-  .auto-more {
-    margin-top: 20px;
-  }
-  //   media
-  @include md {
-    margin-bottom: 100px;
-    &-mainbox {
-      flex-direction: column;
-      gap: 0;
-    }
-    &-mainbox__img {
-      width: 100%;
-      height: 215px;
-    }
-    &-mainbox__content {
-      width: 100%;
-      position: relative;
-      .content {
-        position: relative;
-        height: 245px;
-        &-time {
-          position: absolute;
-          top: 24px;
-        }
-        &-title {
-          position: absolute;
-          top: 56px;
-          @include sliceText(4);
-        }
-        &-hashtagbox {
-          position: absolute;
-          top: 194px;
-        }
-      }
-    }
-  }
-  @include sm {
-    &-mainbox__img {
-      height: 175px;
-    }
+  .auto-more-btn {
+    margin-top: 40px;
   }
 }

@@ -34,6 +34,7 @@ a {
     color: #000;
   }
 }
+
 // usualy text-style
 .title-top {
   @include font(#051ed6, 24px, 28px, 800);
@@ -116,14 +117,7 @@ a {
     height: 3px;
   }
 }
-.haw {
-  height: 28px;
-  margin-top: 10px;
-  width: 100%;
-  @include md {
-    margin-top: 0px;
-  }
-}
+
 .base-frame {
   border-radius: 8px;
   border: 3px solid #eff0f3;
@@ -131,9 +125,12 @@ a {
   padding: 24px;
   margin-bottom: 32px;
   height: auto;
+  @include sm {
+    padding: 16px;
+  }
 }
 .more-news {
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   width: 175px;
   height: 48px;
   display: flex;
@@ -141,9 +138,16 @@ a {
   align-items: center;
   border-radius: 100px;
   border: 1.5px solid #051ed6;
-  margin-bottom: 20px;
   &__btn {
     @include font(#051ed6, 14px, 24px, 700);
     text-transform: uppercase;
+  }
+  @include md {
+    margin: 15px auto 20px auto;
+  }
+}
+.bottom-footer {
+  @include sm {
+    height: 79px;
   }
 }

@@ -1,6 +1,6 @@
 .header {
   background-color: $bg-header;
-  &__wrapper {
+  .header-wrapper {
     display: flex;
     align-items: center;
     height: 90px;
@@ -9,86 +9,86 @@
     @include sm {
       height: 60px;
     }
-  }
-  &__logo {
-    width: 120px;
-    height: 40px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    @include sm {
-      width: 74px;
-      height: 25px;
-    }
-  }
-  &__menu {
-    .nav {
-      margin-left: 40px;
-      &__list {
-        display: flex;
-        align-items: center;
+    &__logo {
+      width: 120px;
+      height: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
-      &__item {
-        width: max-content;
-        padding: 15px;
-        height: 90px;
+      @include sm {
+        width: 74px;
+        height: 25px;
+      }
+    }
+    &__menu {
+      .nav {
+        margin-left: 40px;
+        &__list {
+          display: flex;
+          align-items: center;
+        }
+        &__item {
+          width: max-content;
+          padding: 15px;
+          height: 90px;
+          display: flex;
+          align-items: center;
+          border-bottom: 4px solid transparent;
+          .nav__item-a {
+            @include font(#000, 16px, 20px, 600);
+            text-transform: capitalize;
+          }
+          &.active {
+            border-bottom: 4px solid #051ed6;
+            .nav__item-a {
+              color: #051ed6;
+              font-weight: 800;
+            }
+          }
+          &:hover {
+            .nav__item-a {
+              color: #051dd6a0;
+            }
+          }
+        }
+      }
+      // media
+      @include md {
+        display: none;
+      }
+    }
+    &__lang {
+      position: absolute;
+      right: 0;
+      .lang {
         display: flex;
         align-items: center;
-        border-bottom: 4px solid transparent;
-        .nav__item-a {
-          @include font(#000, 16px, 20px, 600);
+        gap: 10px;
+        &__itembox {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          background: #fff;
+          box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+          @include font(#afafaf, 16px, 20px, 600);
           text-transform: capitalize;
-        }
-        &.active {
-          border-bottom: 4px solid #051ed6;
-          .nav__item-a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          &.active {
             color: #051ed6;
             font-weight: 800;
           }
-        }
-        &:hover {
-          .nav__item-a {
-            color: #051dd6a0;
+          // media
+          @include sm {
+            width: 28px;
+            height: 28px;
+            @include font(#afafaf, 14px, 20px, 600);
+            border-radius: 28px;
           }
-        }
-      }
-    }
-    // media
-    @include md {
-      display: none;
-    }
-  }
-  &__lang {
-    position: absolute;
-    right: 0;
-    .lang {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      &__itembox {
-        width: 40px;
-        height: 40px;
-        border-radius: 40px;
-        background: #fff;
-        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
-        @include font(#afafaf, 16px, 20px, 600);
-        text-transform: capitalize;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        &.active {
-          color: #051ed6;
-          font-weight: 800;
-        }
-        // media
-        @include sm {
-          width: 28px;
-          height: 28px;
-          @include font(#afafaf, 14px, 20px, 600);
-          border-radius: 28px;
         }
       }
     }

@@ -1,33 +1,18 @@
-.main__hashtag {
+.haw-com {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 6px;
-  .hashtag {
+  &__box {
     border-radius: 100px;
     display: flex;
     align-items: center;
-    margin-right: 16px;
-    &__text {
-      display: flex;
-      @include font(#9b9b9c, 14px, 16px, 600);
-    }
+    padding: 6px 12px;
 
-    //
-    // hover
-    &:hover {
-      cursor: pointer;
-      .hashtag__text {
-        color: #000;
-        text-decoration: underline;
-      }
-    }
-    // for color
     &.blue {
       background: #eaecff;
-      padding: 6px 12px;
 
-      .hashtag__text {
+      .haw-com__text {
         color: #051ed6;
         p {
           display: none;
@@ -36,9 +21,8 @@
     }
     &.red {
       background: #ffeaea;
-      padding: 6px 12px;
 
-      .hashtag__text {
+      .haw-com__text {
         color: #d60505;
         p {
           display: none;
@@ -47,14 +31,17 @@
     }
     &.yellow {
       background: #fff7ea;
-      padding: 6px 12px;
 
-      .hashtag__text {
+      .haw-com__text {
         color: #f90;
         p {
           display: none;
         }
       }
     }
+  }
+  &__text {
+    display: flex;
+    @include font(#9b9b9c, 14px, 16px, 600);
   }
 }
