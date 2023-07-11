@@ -99,14 +99,20 @@
       }
     }
   }
+  .mobile-box {
+    display: none;
+  }
 
   // media
-  @include sm {
-    width: 100%;
-    background-color: #fff;
+  @include md {
     &-desktop {
       display: none;
     }
+  }
+  @include sm {
+    width: 100%;
+    background-color: #fff;
+
     &-mobile {
       display: flex;
       padding: 0 16px;
